@@ -26,6 +26,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         //Just changing since the commit has to be made
+        
     }
 
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
