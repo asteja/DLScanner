@@ -21,6 +21,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(Bundle.allBundles.count)
         centralManager = CBCentralManager(delegate: self,
                                           queue: nil)
         // Do any additional setup after loading the view, typically from a nib.
@@ -37,7 +38,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate {
             // 1
             keepScanning = true
             // 2
-            timeInterval = Timer(timeInterval: timeScanInterval, target: self, selector: #selector(pauseScan), userInfo: nil, repeats: false)
+//            timeInterval = Timer(timeInterval: timeScanInterval, target: self, selector: #selector(pauseScan), userInfo: nil, repeats: false)
             // 3
             centralManager.scanForPeripherals(withServices: nil, options: nil)
         case .poweredOff:
